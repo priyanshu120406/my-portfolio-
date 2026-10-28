@@ -1,63 +1,298 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Priyanshu Chouhan Web Development Portfolio - Home">
-    
-    <title>Priyanshu Chouhan| Home</title>
+
+    <title>Priyanshu Chouhan | Home</title>
+
     <link rel="stylesheet" href="style.css">
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f1f5f9;
+            color: #222;
+        }
+
+        .main-container {
+            display: flex;
+            gap: 25px;
+            max-width: 1200px;
+            margin: 30px auto;
+            padding: 20px;
+        }
+
+        .sidebar {
+            width: 300px;
+            flex-shrink: 0;
+            padding: 30px 20px;
+            background: #172554;
+            color: white;
+            border-radius: 15px;
+            text-align: center;
+            align-self: flex-start;
+        }
+
+        .profile-pic-container {
+            margin-bottom: 20px;
+        }
+
+        .profile-pic {
+            display: block;
+            width: 160px;
+            height: 160px;
+            margin: 0 auto;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid #60a5fa;
+        }
+
+        .sidebar h1 {
+            font-size: 25px;
+            margin-bottom: 10px;
+        }
+
+        .designation {
+            color: #bfdbfe;
+            margin-bottom: 25px;
+        }
+
+        .contact-info {
+            text-align: left;
+            font-size: 14px;
+            line-height: 1.7;
+            overflow-wrap: anywhere;
+        }
+
+        .content-area {
+            flex: 1;
+            min-width: 0;
+        }
+
+        .about-top-card {
+            background: white;
+            padding: 25px;
+            margin-bottom: 20px;
+            border-radius: 12px;
+            box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+        }
+
+        .about-top-card h2,
+        .about-top-card h3 {
+            color: #1d4ed8;
+            margin-top: 0;
+        }
+
+        .about-top-card p {
+            line-height: 1.8;
+        }
+
+        .navigation-box {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-bottom: 20px;
+        }
+
+        .page-link-btn {
+            display: inline-block;
+            padding: 13px 18px;
+            background: #2563eb;
+            color: white;
+            text-decoration: none;
+            border-radius: 7px;
+        }
+
+        .page-link-btn:hover,
+        .send-btn:hover {
+            background: #1e40af;
+        }
+
+        .contact-form .form-group {
+            margin-bottom: 16px;
+        }
+
+        .contact-form label {
+            display: block;
+            margin-bottom: 7px;
+            font-weight: bold;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #cbd5e1;
+            border-radius: 6px;
+            font: inherit;
+        }
+
+        .contact-form textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+
+        .send-btn {
+            padding: 13px 22px;
+            background: #2563eb;
+            color: white;
+            border: none;
+            border-radius: 7px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        @media (max-width: 768px) {
+            .main-container {
+                flex-direction: column;
+                margin: 10px auto;
+                padding: 12px;
+            }
+
+            .sidebar {
+                width: 100%;
+            }
+
+            .content-area {
+                width: 100%;
+            }
+
+            .navigation-box {
+                flex-direction: column;
+            }
+
+            .page-link-btn {
+                text-align: center;
+            }
+        }
+    </style>
 </head>
+
 <body>
 
     <div class="main-container">
-        
-        <div class="sidebar">
+
+        <!-- Profile Sidebar -->
+        <aside class="sidebar">
+
             <div class="profile-pic-container">
-                <img src="profile.jpg" alt="Priyanshu Chouhan" class="profile-pic">
+                <img
+                    src="./profile.jpg"
+                    alt="Priyanshu Chouhan"
+                    class="profile-pic"
+                >
             </div>
+
             <h1>Priyanshu Chouhan</h1>
-            <p class="designation">Web Development Intern</p>
-            
+
+            <p class="designation">
+                Web Development Intern
+            </p>
+
             <div class="contact-info">
-                <p><strong>Email:</strong> 24it35@ecajmer.ac.in</p>
-                <p><strong>Phone:</strong> +91 9999999999</p>
-                <p><strong>Location:</strong> Ajmer, Rajasthan, India</p>
-            </div>
-        </div>
+                <p>
+                    <strong>Email:</strong>
+                    24it35@ecajmer.ac.in
+                </p>
 
-        <div class="content-area">
-            
-            <div class="about-top-card" tabindex="0">
+                <p>
+                    <strong>Phone:</strong>
+                    +91 9999999999
+                </p>
+
+                <p>
+                    <strong>Location:</strong>
+                    Ajmer, Rajasthan, India
+                </p>
+            </div>
+
+        </aside>
+
+        <!-- Main Content -->
+        <main class="content-area">
+
+            <section class="about-top-card">
                 <h2>About Me</h2>
-                <p>I am a student passionate about technology and software development. I have a foundational understanding of C++ and Python programming languages. Currently, I am expanding my skills in front-end web development by learning HTML5, CSS3, and JavaScript during my virtual internship at Thiranex.</p>
-            </div>
 
-            <div class="navigation-box">
-                <a href="education.html" class="page-link-btn">View My Education</a>
-                <a href="skills.html" class="page-link-btn">View Technical Skills</a>
-            </div>
+                <p>
+                    I am a student passionate about technology and
+                    software development. I have a foundational
+                    understanding of C++ and Python programming
+                    languages. Currently, I am expanding my skills
+                    in front-end web development by learning HTML5,
+                    CSS3, and JavaScript during my virtual internship
+                    at Thiranex.
+                </p>
+            </section>
 
-            <div class="about-top-card" tabindex="0">
+            <!-- Navigation Links -->
+            <nav class="navigation-box">
+                <a href="education.html" class="page-link-btn">
+                    View My Education
+                </a>
+
+                <a href="skills.html" class="page-link-btn">
+                    View Technical Skills
+                </a>
+            </nav>
+
+            <!-- Contact Form -->
+            <section class="about-top-card">
                 <h3>Contact Me</h3>
+
                 <form action="#" method="POST" class="contact-form">
+
                     <div class="form-group">
                         <label for="username">Your Name:</label>
-                        <input type="text" id="username" name="username" placeholder="Enter full name" required>
+
+                        <input
+                            type="text"
+                            id="username"
+                            name="username"
+                            placeholder="Enter full name"
+                            required
+                        >
                     </div>
+
                     <div class="form-group">
                         <label for="useremail">Your Email:</label>
-                        <input type="email" id="useremail" name="useremail" placeholder="Enter email address" required>
+
+                        <input
+                            type="email"
+                            id="useremail"
+                            name="useremail"
+                            placeholder="Enter email address"
+                            required
+                        >
                     </div>
+
                     <div class="form-group">
                         <label for="usermessage">Your Message:</label>
-                        <textarea id="usermessage" name="usermessage" placeholder="Type your message here" required></textarea>
+
+                        <textarea
+                            id="usermessage"
+                            name="usermessage"
+                            placeholder="Type your message here"
+                            required
+                        ></textarea>
                     </div>
-                    <button type="submit" class="send-btn">Send Message</button>
+
+                    <button type="submit" class="send-btn">
+                        Send Message
+                    </button>
+
                 </form>
-            </div>
-            
-        </div>
+            </section>
+
+        </main>
 
     </div>
 
